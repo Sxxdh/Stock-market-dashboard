@@ -53,4 +53,4 @@ A sophisticated, modern stock market dashboard built with HTML5, CSS3, JavaScrip
 6. **Open in browser**
    - Navigate to `http://localhost:3000`
 
-## Project Structure
+
