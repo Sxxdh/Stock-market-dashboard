@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockMarket Pro - Real-time Trading Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">📈</span>
+                <span class="logo-text">StockMarket Pro</span>
+            </div>
+            <div class="header-controls">
+                <div class="time-display">
+                    <span id="current-time"></span>
+                </div>
+                <div class="theme-toggle">
+                    <button id="theme-btn">🌙</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Left Panel - Stock List -->
+            <aside class="left-panel">
+                <div class="panel-header">
+                    <h3>Market Watch</h3>
+                    <div class="search-box">
+                        <input type="text" id="stock-search" placeholder="Search stocks...">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                </div>
+
+                <div class="stock-list" id="stock-list">
+                    <!-- Stock items will be populated by JavaScript -->
+                </div>
+            </aside>
+
+            <!-- Main Panel - Chart Area -->
+            <section class="main-panel">
+                <div class="chart-header">
+                    <div class="stock-info">
+                        <h2 id="selected-stock-name">NIFTY 50</h2>
+                        <div class="stock-details">
+                            <span class="current-price" id="current-price">₹19,425.35</span>
+                            <span class="price-change positive" id="price-change">+125.45 (+0.65%)</span>
+                        </div>
+                    </div>
+
+                    <div class="time-intervals">
+                        <button class="interval-btn active" data-interval="1m">1m</button>
+                        <button class="interval-btn" data-interval="5m">5m</button>
+                        <button class="interval-btn" data-interval="15m">15m</button>
+                        <button class="interval-btn" data-interval="1h">1h</button>
+                        <button class="interval-btn" data-interval="1d">1d</button>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="stock-chart"></canvas>
+                </div>
+
+                <div class="stock-stats">
+                    <div class="stat-card">
+                        <h4>52 Week High</h4>
+                        <span class="stat-value" id="week-high">₹20,150.00</span>
+                    </div>
+                    <div class="stat-card">
+                        <h4>52 Week Low</h4>
+                        <span class="stat-value" id="week-low">₹16,800.00</span>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Volume</h4>
+                        <span class="stat-value" id="volume">2.5M</span>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Market Cap</h4>
+                        <span class="stat-value" id="market-cap">₹2.1T</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
